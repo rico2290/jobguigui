@@ -1,0 +1,13 @@
+{
+  "name": "jobgui",
+  "version": "1.0.0",
+  "description": "jobgui i un site pa kin ku na busca tarbadju",
+  "main": "index.js",
+  "author": "rico22",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  }
+ 
+}
