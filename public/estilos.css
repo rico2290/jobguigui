@@ -46,3 +46,48 @@ h1 {
     margin-left: 3px;
     
 }
+
+
+footer   {
+    color:cornsilk;
+    display: block;
+    text-decoration: none;
+    background-color:#009688;
+    position: relative;
+    text-align: center;
+    font-size: 14px;
+    width: auto;
+    left: auto;
+    right: auto;
+    margin-top: auto;
+    
+} 
+
+
+.rodape  {
+    margin-top: 10px;
+    text-decoration: none;
+    background-color: #00786D;
+} 
+
+.rodape a{
+    margin-top: 10px;
+    text-decoration: none;
+    color: ivory;
+    list-style: none
+} 
+
+.coracao {
+    color: crimson
+}
+
+.removeUnderline {
+  cursor: pointer;
+  list-style: none;
+}
+
+.vagas {
+    margin-top: 40px;
+    margin-left: 0;
+
+}

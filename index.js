@@ -4,10 +4,26 @@ const app = express()
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
 
+const sqlite = require('sqlite')
+const dbConnection = sqlite.open('banco.sqlite',{Promise})
+
 app.get('/', (request, response)=>{
-    //console.log(new Date())
-    response.render('home')
+    response.render('home', {
+        // date: new Date()
+    })
 })
+
+app.get('/vaga', (request, response)=>{
+    response.render('vaga')
+})
+
+const init = async()=>{
+    const db = await dbConnection
+    const categoria = 'Engineering Team'
+    await db.run('create table if not exists categorias (id INTEGER PRIMARY KEY, categoria TEXT);')
+    await db.run(`insert into categorias(categoria) values('${categoria}')`)
+}
+init()
 
 app.listen(3000, (err)=>{
     if(err){
@@ -17,4 +33,3 @@ app.listen(3000, (err)=>{
         console.log('Servidor do JobGui iniciado rodando...')
     }
 })
-
